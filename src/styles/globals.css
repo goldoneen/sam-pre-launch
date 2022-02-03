@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "archivo-regular";
+    src: url("/fonts/Archivo-Regular.woff2") format("woff2"),
+      url("/fonts/Archivo-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "archivo-medium";
+    src: url("/fonts/Archivo-Medium.woff2") format("woff2"),
+      url("/fonts/Archivo-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "archivo-semibold";
+    src: url("/fonts/Archivo-SemiBold.woff2") format("woff2"),
+      url("/fonts/Archivo-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "manrope-extrabold";
+    src: url("/fonts/Manrope-ExtraBold.woff2") format("woff2"),
+      url("/fonts/Manrope-ExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "manrope-medium";
+    src: url("/fonts/Manrope-Medium.woff2") format("woff2"),
+      url("/fonts/Manrope-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "manrope-semibold";
+    src: url("/fonts/Manrope-SemiBold.woff2") format("woff2"),
+      url("/fonts/Manrope-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "montserrat-regular";
+    src: url("/fonts/Montserrat-Regular.woff2") format("woff2"),
+      url("/fonts/Montserrat-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  body{
+    @apply font-archivo-medium
+  }
+}
+
+@media screen and (max-width: 1760px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+.bd {
+  @apply border-2 border-red-500;
+}
+
+.container {
+  @apply px-4 sm:px-8 md:px-12 xl:px-16 max-w-[1920px] mx-auto;
+}
+
+h1 {
+  @apply text-4xl  md:text-6xl xl:text-5.5rem text-primary;
+}
+h2 {
+  @apply text-3xl sm:text-4xl  md:text-5xl xl:text-55px text-white font-archivo-semibold;
+}
+h3 {
+  @apply  text-3xl md:md:text-4xl xl:text-2.8rem text-white font-archivo-medium;
+}
+h4 {
+  @apply text-xl md:text-2xl xl:text-3xl text-white font-archivo-semibold;
+}
+h5 {
+  @apply text-2xl text-primary;
+}
+h6 {
+  @apply text-lg text-primary;
+}
+p {
+  @apply text-base text-secondary;
+}
+
+.nav-items {
+  @apply border-transparent text-[#909295]  font-archivo-regular hover:border-gray-500  inline-flex items-center  pt-1 border-b-2 text-base font-medium;
+}
+.footer-heading {
+  @apply text-xl text-white font-archivo-medium;
+}
+.footer-item {
+  @apply text-base text-[#7F8FA5] font-manrope-medium hover:text-[#6985ac];
+}
+.borders{
+  @apply border border-darkgray
+}
+
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  @apply inline-flex items-center justify-center px-9 py-2.5 borders bg-[#191A34] hover:border-[#2F93FF] hover:border relative text-white text-base rounded-full focus:outline-none;
+}
+
+.create-card {
+  @apply font-archivo-medium bg-gray2 rounded-[10px]  h-[10.5rem]  text-lg flex items-center justify-center text-[#7F8FA5] hover:border-[#2F93FF] hover:border hover:text-blue1;
+}
+
+.create-card2 {
+  @apply bg-gray2 rounded-[10px]  h-[10.5rem];
+}
